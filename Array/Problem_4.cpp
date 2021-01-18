@@ -42,41 +42,6 @@ void sort012(int arr[], int n)
         }
     }
 
-    // int c0 = 0, c1 = 0, c2 = 0;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     switch (arr[i])
-    //     {
-    //     case 0:
-    //         c0++;
-    //         break;
-    //     case 1:
-    //         c1++;
-    //         break;
-    //     case 2:
-    //         c2++;
-    //         break;
-    //     }
-    // }
-    // int index = 0;
-    // while (c0 > 0)
-    // {
-    //     arr[index] = 0;
-    //     index++;
-    //     c0--;
-    // }
-    // while (c1 > 0)
-    // {
-    //     arr[index] = 1;
-    //     index++;
-    //     c1--;
-    // }
-    // while (c2 > 0)
-    // {
-    //     arr[index] = 2;
-    //     index++;
-    //     c2--;
-    // }
 }
 int main()
 {
