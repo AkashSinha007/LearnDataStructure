@@ -1,27 +1,34 @@
 /*
-Palindromic Array 
+Minimum no. of operations required to make an array palindrome
 
-https://practice.geeksforgeeks.org/problems/palindromic-array/0
+https://www.geeksforgeeks.org/find-minimum-number-of-merge-operations-to-make-an-array-palindrome/
 */
 
 int PalinArray(int a[], int n)
 { //add code here.
-    int digit = 0;
-    int rev = 0;
-    int rem = 0;
-    for (int i = 0; i < n; i++)
+    int op = 0;
+    int i=0, j= n-1;
+
+    while(i<=j)
     {
-        int temp = a[i];
-        rev = 0;
-        while (temp > 0)
+        if(a[i]==a[j])
         {
-            rem = temp % 10;
-            temp = temp / 10;
-            rev = rev * 10 + rem;
+            i++;
+            j--;
         }
-        if (a[i] != rev)
-            return 0;
+        else if(a[i]>a[j])
+        {
+            j--;
+            a[j]=a[j]+a[j+1];
+            op++;
+        }
+        else
+        {
+            i++;
+            a[i]=a[i]+a[i-1];
+            op++;
+        }
     }
 
-    return 1;
+    return op;
 }
